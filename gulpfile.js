@@ -143,11 +143,15 @@ gulp.task('copybower-js', function () {
 gulp.task('copybower-styles', function () {
   var sources = config.libFiles['css'];
   var production  = args.mode === 'production' ? true : false;
+  if(sources){
   return gulp
   .src(sources)
   .pipe(gulpif(production, uglify()))
   .pipe(gulpif(production, concat('bundle.css')))
   .pipe(gulp.dest(config.build + config.lib));
+} else {
+  return;
+}
 })
 
 gulp.task('wiredep', ['copybower'], function() {
