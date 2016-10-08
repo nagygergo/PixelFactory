@@ -16,7 +16,6 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin');
     gulporder = require('gulp-order');
     inject = require('gulp-inject');
-    wiredep = require('gulp-wiredep');
     htmlmin = require('gulp-htmlmin');
     clean = require('gulp-clean');
     rimraf = require('gulp-rimraf');
