@@ -1,6 +1,5 @@
 var gulp = require('gulp'),
     gutil = require('gulp-util'),
-    useref = require('gulp-useref'),
     gulpif = require('gulp-if'),
     autoprefixer = require('gulp-autoprefixer'),
     uglify = require('gulp-uglify'),
