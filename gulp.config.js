@@ -33,15 +33,16 @@ module.exports = function() {
     dist : 'dist',
     // app js, with no specs
     js: [
+      app + '*.module.js',
       app + '**/*.module.js',
       app + '**/*.js',
       '!' + app + '**/*.spec.js'
     ],
 
     buildjsOrder: [
-      './build/app/**/app.module.js',
-      './build/app/**/*.module.js',
-      './build/app/**/*.js'
+      './build/app/*/*.module.js',
+      './build/app/**/*.js',
+      './build/app/app.module.js'
     ],
     sass: 'styles/**/*.scss',
     report: report,
