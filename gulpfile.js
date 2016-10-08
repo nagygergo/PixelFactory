@@ -36,7 +36,7 @@ gulp.task('build', function (callback) {
 gulp.task('deploy', ['build'], function () {
   return gulp
     .src(config.build + '**/*')
-    .pipe(ghPages({cacheDir : config.dist}));
+    .pipe(ghPages());
 })
 
 gulp.task('test', function (done) {
