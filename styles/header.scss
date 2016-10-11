@@ -1,0 +1,50 @@
+.app-header {
+  height: 10%;
+  width: 100%;
+  background-color: black;
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+
+.logo_container{
+  height: 100%;
+  width: auto;
+  position: absolute;
+  left: 3%;
+}
+
+#logo_img {
+  height: 100%;
+  width: auto;
+}
+
+.save_container{
+  height: 100%;
+  width: auto;
+  position: absolute;
+  right: 5%;
+}
+
+#save_img {
+  height: 40%;
+  width: auto;
+  position: absolute;
+  right:inherit;
+  top: 30%;
+}
+
+.open_container{
+  height: 100%;
+  width: auto;
+  position: absolute;
+  right: 15%;
+}
+
+#open_img {
+  height: 50%;
+  width: auto;
+  position: absolute;
+  right: inherit;
+  top: 25%;
+}
