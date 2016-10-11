@@ -10,6 +10,7 @@
         var component = {
             templateUrl: 'app/feature-button/feature-button.html',
             controller: FeatureButtonCtrl,
+            controllerAs: 'vm'
         };
 
         return component;
