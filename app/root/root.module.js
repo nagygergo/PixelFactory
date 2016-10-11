@@ -3,6 +3,7 @@
 
     angular
         .module('app.root', [
-            'app.core'
+            'app.core',
+            'app.feature-button'
         ]);
 })();
