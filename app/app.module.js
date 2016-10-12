@@ -4,5 +4,6 @@
     angular
         .module('app', [
           'app.core',
-          'app.root']);
+          'app.root',
+          'app.header']);
 })();
