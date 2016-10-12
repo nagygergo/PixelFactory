@@ -10,6 +10,7 @@
         var component = {
             templateUrl: 'app/header/header.html',
             controller: HeaderCtrl,
+            controllerAs: 'vm'
         };
 
         return component;
