@@ -4,6 +4,7 @@
     angular
         .module('app.root', [
             'app.core',
-            'app.header'
+            'app.header',
+            'app.canvas'
         ]);
 })();
