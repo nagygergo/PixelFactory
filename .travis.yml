@@ -1,11 +1,11 @@
 language: node_js
 node_js:
   - '4.4'
-before script:
-  'export CHROME_BIN=chromium-browser'
-  'export DISPLAY=:99.0'
-  'npm install -g bower karma gulp eslint'
-  'npm install'
-  'bower install'
+before_script:
+  - 'export CHROME_BIN=chromium-browser'
+  - 'export DISPLAY=:99.0'
+  - 'npm install -g bower karma gulp eslint'
+  - 'npm install'
+  - 'bower install'
 after_script:
-  gulp test
+  - 'gulp test'
