@@ -16,23 +16,25 @@
         return component;
     }
 
-    CanvasCtrl.$inject = ['$log'];
+    CanvasCtrl.$inject = ['$log', '$window', '$document'];
 
     /* @ngInject */
-    function CanvasCtrl($log) {
+    function CanvasCtrl($log, $window, $document) {
       var vm = this;
-      var canvas = document.getElementById('pfCanvas');
+      var canvas = $window.document.getElementById('pfCanvas');
+
       var ctx = canvas.getContext('2d');
 
       var src = 'images/mario.png';
-      var parent = document.getElementById('canvas');
+
+      var parent = $window.document.getElementById('canvas');
 
       var angleInDegrees=0;
 
       initialize();
 
       function initialize() {
-				window.addEventListener('resize', resizeCanvas, false);
+				$window.addEventListener('resize', resizeCanvas, false);
 				resizeCanvas();
 			}
 
