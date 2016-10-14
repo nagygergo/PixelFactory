@@ -1,0 +1,13 @@
+$button-height : 40px;
+$button-width : 40px;
+.feature-button {
+  display: inline-block;
+  margin-left: $button-width/4;
+  margin-right: $button-width/4;
+  margin-top: $button-height/4;
+  margin-bottom: $button-height/4;
+  img {
+    width: $button-width;
+    height: $button-height;
+  }
+}
