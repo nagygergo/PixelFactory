@@ -68,12 +68,14 @@ module.exports = function() {
     var options = {
     basePath : '',
     files : karmaFiles,
-    browsers : ['Chrome', 'PhantomJs', 'Firefox'],
+    browsers : ['Chrome', 'Firefox'],
     plugins: [
             'karma-spec-reporter',
             'karma-jasmine',
             'karma-chrome-launcher',
-            'karma-coverage'
+            'karma-coverage',
+            'karma-firefox-launcher',
+            'karma-phantomjs-launcher'
         ],
     autoWatch: true,
     singleRun : singleRun

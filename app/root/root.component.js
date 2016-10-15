@@ -6,7 +6,7 @@
         .component('pfRoot', PfRoot());
 
     /**
-     * This component should only be responsible for pulling the other components together    
+     * This component should only be responsible for pulling the other components together
      */
     /* @ngInject */
     function PfRoot() {
