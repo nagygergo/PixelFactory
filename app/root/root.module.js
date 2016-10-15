@@ -5,6 +5,7 @@
         .module('app.root', [
             'app.core',
             'app.header',
-            'app.canvas'
+            'app.canvas',
+            'app.feature-button'
         ]);
 })();
