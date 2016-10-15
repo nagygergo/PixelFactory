@@ -19,7 +19,12 @@ angular.module('app.feature-button')
   },
   'grayscale' : {
     imgURL: 'images/grayscale.png'
+  },
+  'cancel' : {
+    imgURL: 'images/cancel.png'
+  },
+  'checkmark' : {
+    imgURL: 'images/checkmark.png'
   }
 });
-
 })();
