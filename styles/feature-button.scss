@@ -1,13 +1,16 @@
-$button-height : 40px;
-$button-width : 40px;
 .feature-button {
   display: inline-block;
-  margin-left: $button-width/4;
-  margin-right: $button-width/4;
-  margin-top: $button-height/4;
-  margin-bottom: $button-height/4;
+  margin: 10% 0;
+
   img {
-    width: $button-width;
-    height: $button-height;
+    max-height: 100%;
+    max-width:100%;
+  }
+}
+
+@media screen and (orientation:landscape) {
+  .feature-button {
+    height: 100%;
+    margin: 0 10%;
   }
 }

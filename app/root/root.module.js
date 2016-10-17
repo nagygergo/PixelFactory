@@ -7,6 +7,7 @@
             'app.header',
             'app.canvas',
             'app.feature-button',
-            'app.acceptdeny'
+            'app.acceptdeny',
+            'app.feature-list'
         ]);
 })();

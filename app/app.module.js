@@ -5,5 +5,7 @@
         .module('app', [
           'app.core',
           'app.root',
-          'app.header']);
+          'app.header',
+          'app.acceptdeny',
+          'app.feature-list']);
 })();

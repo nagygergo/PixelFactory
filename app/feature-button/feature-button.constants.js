@@ -12,10 +12,10 @@ angular.module('app.feature-button')
     imgURL: 'images/rotate_180.png'
   },
   'flip-horizontal' : {
-    imgURL: 'images/flip_horizontal.png'
+    imgURL: 'images/flip-horizontal.png'
   },
   'flip-vertical' : {
-    imgURL: 'images/flip_vertical.png'
+    imgURL: 'images/flip-vertical.png'
   },
   'grayscale' : {
     imgURL: 'images/grayscale.png'
