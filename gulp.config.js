@@ -33,15 +33,16 @@ module.exports = function() {
     dist : 'dist',
     // app js, with no specs
     js: [
+      app + '*.module.js',
       app + '**/*.module.js',
       app + '**/*.js',
       '!' + app + '**/*.spec.js'
     ],
 
     buildjsOrder: [
-      './build/app/**/app.module.js',
-      './build/app/**/*.module.js',
-      './build/app/**/*.js'
+      './build/app/*/*.module.js',
+      './build/app/**/*.js',
+      './build/app/app.module.js'
     ],
     sass: 'styles/**/*.scss',
     report: report,
@@ -67,12 +68,15 @@ module.exports = function() {
     var options = {
     basePath : '',
     files : karmaFiles,
-    browsers : ['Chrome', 'PhantomJs', 'Firefox'],
+    frameworks : ['jasmine'],
+    browsers : ['Chrome', 'Firefox'],
     plugins: [
             'karma-spec-reporter',
             'karma-jasmine',
             'karma-chrome-launcher',
-            'karma-coverage'
+            'karma-coverage',
+            'karma-firefox-launcher',
+            'karma-phantomjs-launcher'
         ],
     autoWatch: true,
     singleRun : singleRun

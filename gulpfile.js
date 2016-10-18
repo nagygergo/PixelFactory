@@ -38,10 +38,19 @@ gulp.task('deploy', ['build'], function () {
     .pipe(ghPages());
 })
 
-gulp.task('test', function (done) {
+gulp.task('test', ['lint-fail'], function (done) {
   new Server(
     config.getKarmaConfig(true),
   done).start();
+});
+
+gulp.task('lint-fail', function () {
+  return gulp
+    .src(config.alljs)
+    .pipe(gulpif(args.verbose, print()))
+    .pipe(eslint())
+    .pipe(eslint.failAfterError())
+    .pipe(eslint.format());
 });
 
 gulp.task('tdd', function (done) {
@@ -143,11 +152,15 @@ gulp.task('copybower-js', function () {
 gulp.task('copybower-styles', function () {
   var sources = config.libFiles['css'];
   var production  = args.mode === 'production' ? true : false;
+  if(sources){
   return gulp
   .src(sources)
   .pipe(gulpif(production, uglify()))
   .pipe(gulpif(production, concat('bundle.css')))
   .pipe(gulp.dest(config.build + config.lib));
+} else {
+  return;
+}
 })
 
 gulp.task('wiredep', ['copybower'], function() {
