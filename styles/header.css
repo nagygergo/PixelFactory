@@ -1,0 +1,51 @@
+.app-header {
+  height: 10%;
+  width: 100%;
+  background-color: black;
+  top: 0;
+  left: 0;
+  position: fixed; }
+
+.logo_container {
+  height: 100%;
+  width: auto;
+  position: absolute;
+  left: 3%; }
+
+#logo_img {
+  height: 100%;
+  width: auto; }
+
+.save_open_container {
+  height: 90%;
+  top: 10%;
+  width: 30%;
+  position: absolute;
+  right: 5%; }
+
+.open_container {
+  position: absolute;
+  width: 50%;
+  height: 80%;
+  left: 0;
+  border-right: 1px solid grey; }
+
+.save_container {
+  position: absolute;
+  width: 50%;
+  height: 80%;
+  right: 0; }
+
+#save_img {
+  position: absolute;
+  max-width: 90%;
+  height: 50%;
+  left: 15%;
+  top: 25%; }
+
+#open_img {
+  position: absolute;
+  max-width: 90%;
+  height: 50%;
+  right: 15%;
+  top: 28%; }

@@ -1,0 +1,17 @@
+.feature-button {
+  display: inline-block;
+  margin: 10% 0; }
+  .feature-button img {
+    max-height: 100%;
+    max-width: 100%; }
+  .feature-button .image-container {
+    display: inline; }
+
+@media screen and (orientation: landscape) {
+  .feature-button {
+    height: 100%;
+    margin: 0 10%; }
+    .feature-button .image-container {
+      height: 100%;
+      width: auto;
+      display: inline; } }

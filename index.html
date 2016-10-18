@@ -2,37 +2,45 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <title>Hello World</title>
+        <title>PixelFactory</title>
         <meta name="viewport" content="width=device-width">
         <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
         <!-- bower:css -->
-        <link rel="stylesheet" href="lib/bootstrap.css">
         <!-- endinject -->
         <!-- inject:css -->
+        <link rel="stylesheet" href="styles/acceptdeny.css">
+        <link rel="stylesheet" href="styles/canvas.css">
+        <link rel="stylesheet" href="styles/feature-button.css">
+        <link rel="stylesheet" href="styles/feature-list.css">
+        <link rel="stylesheet" href="styles/header.css">
         <link rel="stylesheet" href="styles/main.css">
         <!-- endinject -->
+        <!-- bower:js -->
+        <script src="lib/angular.js"></script>
+        <script src="lib/whimsicalRipple.js"></script>
+        <!-- endinject -->
+        <!-- inject:js -->
+        <script src="app/acceptdeny/acceptdeny.module.js"></script>
+        <script src="app/canvas/canvas.module.js"></script>
+        <script src="app/core/core.module.js"></script>
+        <script src="app/feature-button/feature-button.module.js"></script>
+        <script src="app/header/header.module.js"></script>
+        <script src="app/root/root.module.js"></script>
+        <script src="app/services/services.module.js"></script>
+        <script src="app/feature-list/feature-list.module.js"></script>
+        <script src="app/acceptdeny/acceptdeny.component.js"></script>
+        <script src="app/canvas/canvas.component.js"></script>
+        <script src="app/feature-button/feature-button.component.js"></script>
+        <script src="app/feature-button/feature-button.constants.js"></script>
+        <script src="app/feature-list/feature-list.component.js"></script>
+        <script src="app/header/header.component.js"></script>
+        <script src="app/root/root.component.js"></script>
+        <script src="app/app.config.js"></script>
+        <script src="app/app.constants.js"></script>
+        <script src="app/app.module.js"></script>
+        <!-- endinject -->
     </head>
-    <body ng-app="HelloWorld" ng-controller="HelloWorldCtrl">
-
-            <header>
-                <h1 class="animate">Hello World</h1>
-                <p class="animate">Test app.</p>
-            </header>
-            <main class="animate">
-
-            </main>
-            <footer class="animate">
-                <hr>
-                <p>Gergő</p>
-            </footer>
-            <!-- bower:js -->
-            <script src="lib/angular.js"></script>
-            <script src="lib/bootstrap.js"></script>
-            <script src="lib/jquery.js"></script>
-            <!-- endinject -->
-            <!-- inject:js -->
-            <script src="app/app.js"></script>
-            <script src="app/testmodule/app.js"></script>
-            <!-- endinject -->
+    <body ng-app="app">
+      <pf-root></pf-root>
     </body>
 </html>
