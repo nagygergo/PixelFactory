@@ -2,5 +2,7 @@
     'use strict';
 
     angular
-        .module('app.core', []);
+        .module('app.core', [
+          'whimsicalRipple'
+        ]);
 })();
