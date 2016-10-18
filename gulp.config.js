@@ -68,6 +68,7 @@ module.exports = function() {
     var options = {
     basePath : '',
     files : karmaFiles,
+    frameworks : ['jasmine'],
     browsers : ['Chrome', 'Firefox'],
     plugins: [
             'karma-spec-reporter',
