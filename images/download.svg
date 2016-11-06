@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   width="512.000000pt"
+   height="512.000000pt"
+   viewBox="0 0 512.000000 512.000000"
+   preserveAspectRatio="xMidYMid meet"
+   id="svg2"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="download.svg">
+  <defs
+     id="defs14" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview12"
+     showgrid="false"
+     inkscape:zoom="0.36875"
+     inkscape:cx="320"
+     inkscape:cy="320"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2" />
+  <metadata
+     id="metadata4">
+Created by potrace 1.13, written by Peter Selinger 2001-2015
+<rdf:RDF>
+  <cc:Work
+     rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type
+       rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:title></dc:title>
+  </cc:Work>
+</rdf:RDF>
+</metadata>
+  <g
+     transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+     fill="#000000"
+     stroke="none"
+     id="g6"
+     style="fill:#ffffff">
+    <path
+       d="M2453 5092 c-63 -23 -115 -61 -154 -115 -62 -85 -59 -23 -59 -1371 l0 -1230 -392 390 c-441 439 -428 429 -568 428 -177 -1 -310 -134 -310 -310 0 -145 -45 -91 714 -852 385 -387 701 -695 726 -710 41 -25 54 -27 150 -27 96 0 109 2 150 27 25 15 341 323 726 710 759 761 714 707 714 852 0 176 -133 309 -310 310 -140 1 -127 11 -567 -427 l-393 -391 -2 1249 -3 1250 -28 57 c-32 65 -90 122 -156 151 -65 29 -171 33 -238 9z"
+       id="path8"
+       style="fill:#ffffff" />
+    <path
+       d="M200 1895 c-68 -33 -124 -85 -158 -150 l-27 -50 0 -725 0 -725 28 -57 c32 -65 89 -121 156 -152 l46 -21 2315 0 2315 0 46 21 c67 31 124 87 156 152 l28 57 0 725 0 725 -27 50 c-35 67 -90 118 -162 151 -52 23 -67 26 -140 22 -127 -7 -219 -67 -273 -176 l-28 -57 -3 -517 -3 -518 -1909 0 -1909 0 -3 518 -3 517 -28 57 c-31 62 -84 116 -149 149 -32 17 -65 24 -128 26 -75 4 -91 1 -140 -22z"
+       id="path10"
+       style="fill:#ffffff" />
+  </g>
+</svg>

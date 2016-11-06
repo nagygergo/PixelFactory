@@ -24,7 +24,7 @@
   top: 10%;
   width: 30%;
   position: absolute;
-  right: 5%;
+  right: 0;
 }
 
 .open_container{
@@ -56,4 +56,11 @@
   height: 50%;
   right: 15%;
   top: 28%;
+}
+
+@media screen and (orientation:portrait) {
+    .save_open_container{
+      left: 35%;
+      right: auto;
+    }
 }
