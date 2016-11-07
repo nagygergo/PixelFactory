@@ -1,4 +1,7 @@
 # PixelFactory
+
+![Build status]( https://travis-ci.org/nagygergo/PixelFactory.svg?branch=dev )
+
 ## Prequisites
 To be able to build and run the project, the following need to be installed:
 * Node ^4.2.0
@@ -29,8 +32,6 @@ gulp serve
 Builds the app to the `build` directory, then serves it on `localhost:8080`. It reloads if any file is modified. Also runs eslint to check code style.
 
 #### Test
-**NOT WORKING YET**
-
 ```sh
 gulp test
 ```
@@ -38,8 +39,6 @@ Runs linting and unit tests once. Should be used mostly by Travis.
 *This starts multiple browsers.*
 
 #### TDD
-**NOT WORKING YET**
-
 
 Not really TDD, but no better idea for name
 
