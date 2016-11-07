@@ -22,17 +22,27 @@
 
             api.addCallback = function(callback) {
 
-                api.list[ api.list.length ] = callback;
+                console.log(callback);
+                api.list[ callback ] = callback;
+
+            };
+
+            api.removeCallback = function(callback){
+
+                delete api.list[ callback ];
+                console.log('('+callback+')' + 'removed');
 
             };
 
             var runAll = function() {
 
-                for (var i=0; i<api.list.length; i++){
-                    console.log('('+i+') starting');
-                    var obj = new Obj(api.list[i]);
+                for(var item in api.list){
+                    //console.log('('+item+') starting');
+                    var obj = new Obj(api.list[item]);
                     obj.execute();
                 }
+
+                console.log(api.list);
 
             };
 
