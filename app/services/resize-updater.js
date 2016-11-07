@@ -21,28 +21,20 @@
             api.list = [];
 
             api.addCallback = function(callback) {
-
-                console.log(callback);
-                api.list[ callback ] = callback;
-
+                api.list.push(callback);
             };
 
             api.removeCallback = function(callback){
-
-                delete api.list[ callback ];
-                console.log('('+callback+')' + 'removed');
-
+                var index = api.list.indexOf(callback);
+                delete api.list[index];
             };
 
             var runAll = function() {
 
                 for(var item in api.list){
-                    //console.log('('+item+') starting');
                     var obj = new Obj(api.list[item]);
                     obj.execute();
                 }
-
-                console.log(api.list);
 
             };
 
@@ -61,7 +53,7 @@
 
                     this.promise = defer.promise;
                     this.promise.then(function(result){
-                        console.log('Promise result: _ '+result);
+                        //TODO log
                     });
                 };
             }
