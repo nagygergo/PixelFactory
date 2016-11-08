@@ -2,10 +2,9 @@
   display: flex;
   position: fixed;
   top: 10%;
-  left: 0;
+  right: 5%;
   width: 10%;
   height: 80%;
-  margin-left: 2%;
   justify-content: space-around;
   flex-wrap: nowrap;
   flex-direction: column; }
@@ -14,10 +13,10 @@
   #feature-list {
     flex-direction: row;
     height: 10%;
-    width: 90%;
+    width: 60%;
     margin-bottom: 2%;
     top: auto;
     bottom: 0;
-    right: 10%;
+    right: 20%;
     justify-content: space-around;
     text-align: center; } }
