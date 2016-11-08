@@ -1,8 +1,9 @@
-(function() {
-    'use strict';
+(function () {
+  'use strict';
 
-    angular
+  angular
         .module('app.core', [
-          'whimsicalRipple'
+          'whimsicalRipple',
+          'app.image-handler'
         ]);
 })();

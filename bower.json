@@ -4,9 +4,17 @@
   "version": "0.0.0",
   "dependencies": {
     "angular": "1.5.8",
-    "angular-whimsical-ripple": "^1.0.0"
+    "angular-whimsical-ripple": "^1.0.0",
+    "angular-file-saver": "^1.1.2",
+    "angular-file-model": "^0.3.1"
   },
   "devDependencies": {
     "angular-mocks": "^1.5.8"
+  },
+  "overrides": {
+    "angular": []
+  },
+  "resolutions": {
+    "angular": "1.5.8"
   }
 }
