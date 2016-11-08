@@ -3,13 +3,13 @@
 angular.module('app.feature-button')
 .constant('BUTTONCONFIG', {
   'rotate-left' : {
-    imgURL: 'images/rotate_left.png'
+    imgURL: 'images/rotate-left.png'
   },
   'rotate-right' : {
-    imgURL: 'images/rotate_right.png'
+    imgURL: 'images/rotate-right.png'
   },
   'rotate-180' : {
-    imgURL: 'images/rotate_180.png'
+    imgURL: 'images/rotate-180.png'
   },
   'flip-horizontal' : {
     imgURL: 'images/flip-horizontal.png'
@@ -21,10 +21,10 @@ angular.module('app.feature-button')
     imgURL: 'images/grayscale.png'
   },
   'cancel' : {
-    imgURL: 'images/cancel.png'
+    imgURL: 'images/cancel.svg'
   },
   'checkmark' : {
-    imgURL: 'images/checkmark.png'
+    imgURL: 'images/checkmark.svg'
   }
 });
 })();
