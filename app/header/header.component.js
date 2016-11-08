@@ -10,19 +10,16 @@
     var component = {
       templateUrl: 'app/header/header.html',
       controller: HeaderCtrl,
-      controllerAs: 'vm',
-      bindings: {
-        onFileSelect: '&'
-      }
+      controllerAs: 'vm'
     };
 
     return component;
   }
 
-  HeaderCtrl.$inject = ['$log', 'ImageHandler'];
+  HeaderCtrl.$inject = ['$log', '$scope'];
 
     /* @ngInject */
-  function HeaderCtrl($log, ImageHandler) {
+  function HeaderCtrl($log, $scope) {
     var vm = this;
     vm.onClickSave = onClickSave;
     vm.onClickOpen = onClickOpen;
@@ -32,8 +29,7 @@
     }
     function onClickOpen() {
       $log.debug('Open icon clicked');
-      $log.debug(vm.file);
-      ImageHandler.loadImage(vm.file);
+      $scope.$emit('up:image:open', vm.file);
     }
   }
 })();

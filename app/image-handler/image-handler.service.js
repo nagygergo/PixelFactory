@@ -20,22 +20,18 @@
         // PUBLIC FUNCTIONS
 
     function loadImage(imageFile) {
-      console.log(Object.prototype.toString.call(imageFile));
       if (!imageFile || !(imageFile instanceof File)) {
         throw new TypeError('ERR:INVALIDPARAMS:FILE');
       }
-      console.log(imageFile);
-      getReadyWorker().then(function (worker) {
+
+      return getReadyWorker().then(function (worker) {
         var task =  new Task('loadImage', {file: imageFile});
         return worker.run(task);
       });
     }
 
     function saveImage(imageFile) {
-      if (!imageFile || !(imageFile instanceof File)) {
-        console.error(imageFile);
-      }
-      console.log(imageFile);
+      if (!imageFile || !(imageFile instanceof File)){}
     }
 
         // PRIVATE FUNCTIONS
@@ -88,15 +84,13 @@
 
                     function loadImage(input) {
                       createImageBitmap(input.params.file).then(function (response) {
-                        console.log(response);
                         output.resolve(response);
-                      })
+                      });
                     }
                 }
             ]);
 
       return workerPromise.then(function (angularWorker) {
-        console.log(angularWorker);
         workers.push({
           worker : angularWorker,
           state : 'ready'
