@@ -12,16 +12,25 @@
     function PfRoot() {
         var component = {
             templateUrl: 'app/root/root.html',
-            controller: RootCtrl
+            controller: RootCtrl,
+            controllerAs: 'vm'
         };
 
         return component;
     }
 
-    RootCtrl.$inject = [];
+    RootCtrl.$inject = ['ImageHandler', '$scope'];
 
     /* @ngInject */
-    function RootCtrl() {
+    function RootCtrl(ImageHandler, $scope) {
+        var vm = this;
+        vm.onFileSelect = onFileSelect;
+        vm.canvasApi = {};
 
+        $scope.$on('up:image:open', onFileSelect);
+        
+        function onFileSelect(event, file){
+            $scope.$broadcast('down:image:open', file);
+        }
     }
 })();

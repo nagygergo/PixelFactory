@@ -2,8 +2,8 @@
   'use strict';
 
   angular
-        .module('app.header', [
+        .module('app.image-handler', [
           'app.core',
-          'file-model'
+          'FredrikSandell.worker-pool'
         ]);
 })();

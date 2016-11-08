@@ -10,17 +10,24 @@
         var component = {
             templateUrl: 'app/canvas/canvas.html',
             controller: CanvasCtrl,
-            controllerAs: 'vm'
+            controllerAs: 'vm',
+            bindings: {
+                'api' : '='
+            }
         };
 
         return component;
     }
 
-    CanvasCtrl.$inject = ['$log', '$window', '$document'];
+    CanvasCtrl.$inject = ['$log', '$window', '$document', 'ImageHandler', '$scope'];
 
     /* @ngInject */
-    function CanvasCtrl($log, $window, $document) {
+    function CanvasCtrl($log, $window, $document, ImageHandler, $scope) {
       var vm = this;
+
+      vm.api = {
+          openImage: openImage
+      };
       var canvas = $window.document.getElementById('pfCanvas');
 
       var ctx = canvas.getContext('2d');
@@ -31,15 +38,19 @@
 
       var angleInDegrees=0;
 
+      var image = new Image();
+
+
       initialize();
 
       function initialize() {
 				$window.addEventListener('resize', resizeCanvas, false);
 				resizeCanvas();
+                $scope.$on('down:image:open', openImage);
 			}
 
 			function redraw() {
-        openPicture(src);
+        drawPicture(image);
 			}
 
 			function resizeCanvas() {
@@ -48,12 +59,9 @@
 				redraw();
 			}
 
-      function openPicture(src) {
+      function drawPicture(img) {
         clearCanvas();
-        var img=new Image();
-        img.crossOrigin="anonymous";
-        img.onload=start;
-        img.src=src;
+        start();
         function start(){
           var ratio=calculateProportionalAspectRatio(img.width,img.height,canvas.width,canvas.height);
           ctx.drawImage(img,(canvas.width - img.width*ratio)/2, (canvas.height - img.height*ratio)/2
@@ -67,5 +75,13 @@
       function clearCanvas() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
       }
+        
+      function openImage(event, file) {
+
+          ImageHandler.loadImage(file).then(function (bitmap) {
+              image = bitmap;
+              drawPicture(bitmap);
+          });
+      }  
     }
 })();
