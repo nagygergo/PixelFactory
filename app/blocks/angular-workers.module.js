@@ -30,7 +30,7 @@ angular.module('FredrikSandell.worker-pool', []).service('WorkerService', [
   function ($q) {
     var that = {};
     //this should be configured from the app in the future
-    var urlToAngular = 'http://localhost:8080/lib/angular.js';
+    var urlToAngular = 'https://nagygergo.github.io/PixelFactory/lib/angular.js';
     var serviceToUrlMap = {};
     that.setAngularUrl = function (urlToAngularJs) {
       urlToAngular = urlToAngularJs;
