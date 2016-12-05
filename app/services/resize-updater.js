@@ -9,7 +9,7 @@ function UpdaterService($window, $q, $timeout, $log){
 
     var api = {};
 
-    var size = {
+    api.size = {
         width: undefined,
         height: undefined,
         orientation: undefined
@@ -17,16 +17,16 @@ function UpdaterService($window, $q, $timeout, $log){
 
 
     api.getSize = function(){
-        size.width = $window.innerWidth;
-        size.height = $window.innerHeight;
-        size.orientation = (function(){
-            if (size.width >= size.height){
+        api.size.width = $window.innerWidth;
+        api.size.height = $window.innerHeight;
+        api.size.orientation = (function(){
+            if (api.size.width >= api.size.height){
                 return "landscape";
             } else {
                 return "portrait";
             }
         })();
-        return size;
+        return api.size;
     };
 
     api.list = [];

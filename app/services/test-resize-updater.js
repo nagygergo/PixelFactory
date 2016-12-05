@@ -19,12 +19,12 @@ describe('Testing Resize-updater service',function(){
             expect(resizeUpdater.getSize().height).toEqual($window.innerHeight);
         });
         it('orientation-landscape', function(){
-            $window.innerWidth = 1366;  //ez miért működik - értékadás lehetséges??
+            $window.innerWidth = 1366;
             $window.innerHeight = 768;
             expect(resizeUpdater.getSize().orientation).toEqual("landscape");
         });
         it('orientation-portrait', function(){
-            $window.innerWidth = 768;  //ez miért működik - értékadás lehetséges??
+            $window.innerWidth = 768;
             $window.innerHeight = 1366;
             expect(resizeUpdater.getSize().orientation).toEqual("portrait");
         });
@@ -34,7 +34,7 @@ describe('Testing Resize-updater service',function(){
 
         var $timeout
         var $scope;
-        beforeEach(inject(function(_$timeout_,_$rootScope_){ //parameter name = service name
+        beforeEach(inject(function(_$timeout_,_$rootScope_){
             $timeout = _$timeout_;
             $scope = _$rootScope_.$new();
         }));
