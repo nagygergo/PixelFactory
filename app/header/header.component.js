@@ -1,34 +1,35 @@
-(function() {
-    'use strict';
+(function () {
+  'use strict';
 
-    angular
+  angular
         .module('app.header')
-        .component('pfHeader', PfHeader());
+        .component('pfHeader', pfHeader());
 
     /* @ngInject */
-    function PfHeader() {
-        var component = {
-            templateUrl: 'app/header/header.html',
-            controller: HeaderCtrl,
-            controllerAs: 'vm'
-        };
+  function pfHeader() {
+    var component = {
+      templateUrl: 'app/header/header.html',
+      controller: HeaderCtrl,
+      controllerAs: 'vm'
+    };
 
-        return component;
-    }
+    return component;
+  }
 
-    HeaderCtrl.$inject = ['$log'];
+  HeaderCtrl.$inject = ['$log', '$scope'];
 
     /* @ngInject */
-    function HeaderCtrl($log) {
-      var vm = this;
-      vm.onClickSave = onClickSave;
-      vm.onClickOpen = onClickOpen;
+  function HeaderCtrl($log, $scope) {
+    var vm = this;
+    vm.onClickSave = onClickSave;
+    vm.onClickOpen = onClickOpen;
 
-      function onClickSave() {
-        $log.debug('Save icon clicked');
-      }
-      function onClickOpen() {
-        $log.debug('Open icon clicked');
-      }
+    function onClickSave() {
+      $log.debug('Save icon clicked');
     }
+    function onClickOpen() {
+      $log.debug('Open icon clicked');
+      $scope.$emit('up:image:open', vm.file);
+    }
+  }
 })();

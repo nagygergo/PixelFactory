@@ -1,6 +1,6 @@
 # PixelFactory
 
-![Build status]( https://travis-ci.org/nagygergo/PixelFactory.svg?branch=dev )
+[![Build status]( https://travis-ci.org/nagygergo/PixelFactory.svg?branch=dev )](https://travis-ci.org/nagygergo/PixelFactory)
 
 ## Prequisites
 To be able to build and run the project, the following need to be installed:

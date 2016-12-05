@@ -3,22 +3,22 @@
 angular.module('app.feature-button')
 .constant('BUTTONCONFIG', {
   'rotate-left' : {
-    imgURL: 'images/rotate-left.svg'
+    imgURL: 'images/rotate-left.png'
   },
   'rotate-right' : {
-    imgURL: 'images/rotate-right.svg'
+    imgURL: 'images/rotate-right.png'
   },
   'rotate-180' : {
-    imgURL: 'images/rotate-180.svg'
+    imgURL: 'images/rotate-180.png'
   },
   'flip-horizontal' : {
-    imgURL: 'images/flip-horizontal.svg'
+    imgURL: 'images/flip-horizontal.png'
   },
   'flip-vertical' : {
-    imgURL: 'images/flip-vertical.svg'
+    imgURL: 'images/flip-vertical.png'
   },
   'grayscale' : {
-    imgURL: 'images/grayscale.svg'
+    imgURL: 'images/grayscale.png'
   },
   'cancel' : {
     imgURL: 'images/cancel.svg'
