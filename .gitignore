@@ -3,5 +3,5 @@ bower_components
 .tmp
 build
 dist
-.publish
 .idea
+.publish
