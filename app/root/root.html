@@ -1,4 +1,4 @@
-<pf-header></pf-header on-file-select="vm.onFileSelect">
-<pf-canvas api="vm.canvasApi"></pf-canvas>
-<pf-feature-list></pf-feature-list>
-<pf-acceptdeny></pf-acceptdeny>
+<pf-header  on-open="vm.onOpen(file)" on-save="vm.onSave()"></pf-header>
+<pf-canvas image="vm.image"></pf-canvas>
+<pf-feature-list transform="vm.onTransform(type)"></pf-feature-list>
+<pf-acceptdeny on-accept="vm.onAccept()" on-deny="vm.onDeny()" enabled="vm.unapproved"></pf-acceptdeny>

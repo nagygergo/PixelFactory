@@ -12,7 +12,8 @@
             controller: FeatureButtonCtrl,
             controllerAs: 'vm',
             bindings: {
-              type: '@'
+              type: '@',
+              onClick: '&'
             }
         };
 
@@ -25,19 +26,19 @@
     function FeatureButtonCtrl($log, BUTTONCONFIG) {
       var vm = this;
       vm.imageURL = null;
+      vm.click = click;
       activate();
 
-      vm.onClick = onClick;
+
+      function click() {
+          vm.onClick({type: vm.type});
+      }
+
 
       function activate() {
         if(vm.type && BUTTONCONFIG[vm.type]) {
           vm.imageURL = BUTTONCONFIG[vm.type].imgURL;
         }
-      }
-
-      function onClick() {
-
-        $log.debug('Button clicked');
       }
     }
 })();

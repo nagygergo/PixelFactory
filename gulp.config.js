@@ -12,6 +12,7 @@ module.exports = function() {
     ignorePath: bower.ignorePath
   });
   var libFiles = wiredep();
+  libFiles.js.push(app + '/blocks/jimp.min.js');
   var angularMocks = bower.directory + '/angular-mocks/angular-mocks.js';
   var alljs = [
     app + '**/*.module.js',
@@ -35,14 +36,13 @@ module.exports = function() {
     js: [
       app + '*.module.js',
       app + '**/*.module.js',
-      app + '**/*.js',
-      '!' + app + '**/*.spec.js'
+      app + '**/*.js',      '!' + app + '**/*.spec.js'
     ],
 
     buildjsOrder: [
       './build/app/*/*.module.js',
       './build/app/**/*.js',
-      './build/app/app.module.js'
+      './build/app/app.module.js',
     ],
     sass: 'styles/**/*.scss',
     report: report,

@@ -1,4 +1,4 @@
-(function() {
+(function () {
     'use strict';
 
     angular
@@ -10,7 +10,12 @@
         var component = {
             templateUrl: 'app/acceptdeny/acceptdeny.html',
             controller: AcceptdenyCtrl,
-            controllerAs: 'vm'
+            controllerAs: 'vm',
+            bindings: {
+                onAccept: '&',
+                onDeny: '&',
+                enabled: '<'
+            }
         };
 
         return component;
@@ -20,16 +25,19 @@
 
     /* @ngInject */
     function AcceptdenyCtrl($log) {
-      var vm = this;
+        var vm = this;
 
-      vm.onClickAccept = onClickAccept;
-      vm.onClickDeny = onClickDeny;
+        vm.onClickAccept = onClickAccept;
+        vm.onClickDeny = onClickDeny;
 
-      function onClickAccept() {
-        $log.debug('Accept icon clicked');
-      }
-      function onClickDeny() {
-        $log.debug('Deny icon clicked');
-      }
+        function onClickAccept() {
+                vm.onAccept();
+
+        }
+
+        function onClickDeny() {
+                vm.onDeny();
+
+        }
     }
 })();
