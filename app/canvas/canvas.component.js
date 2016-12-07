@@ -12,33 +12,28 @@
             controller: CanvasCtrl,
             controllerAs: 'vm',
             bindings: {
-                'api' : '='
+                'image' : '<'
             }
         };
 
         return component;
     }
 
-    CanvasCtrl.$inject = ['$log', '$window', '$document', 'ImageHandler', '$scope'];
+    CanvasCtrl.$inject = ['$log', '$window', '$scope', '$element'];
 
     /* @ngInject */
-    function CanvasCtrl($log, $window, $document, ImageHandler, $scope) {
+    function CanvasCtrl($log, $window, $scope, $element) {
       var vm = this;
 
-      vm.api = {
-          openImage: openImage
-      };
       var canvas = $window.document.getElementById('pfCanvas');
 
       var ctx = canvas.getContext('2d');
-
-      var src = 'images/mario.png';
 
       var parent = $window.document.getElementById('canvas');
 
       var angleInDegrees=0;
 
-      var image = new Image();
+        vm.$onChanges = onChange;
 
 
       initialize();
@@ -46,22 +41,23 @@
       function initialize() {
 				$window.addEventListener('resize', resizeCanvas, false);
 				resizeCanvas();
-                $scope.$on('down:image:open', openImage);
-			}
-
-			function redraw() {
-        drawPicture(image);
 			}
 
 			function resizeCanvas() {
-        canvas.width = parent.offsetWidth;
-        canvas.height = parent.offsetHeight;
-				redraw();
+                canvas.width = parent.offsetWidth;
+                canvas.height = parent.offsetHeight;
+				drawPicture(vm.image);
 			}
 
-      function drawPicture(img) {
+		function onChange() {
+            drawPicture(vm.image);
+        }
+
+      function drawPicture(image) {
         clearCanvas();
-        start();
+        var img = new Image();
+        img.onload = start;
+        img.src = image;
         function start(){
           var ratio=calculateProportionalAspectRatio(img.width,img.height,canvas.width,canvas.height);
           ctx.drawImage(img,(canvas.width - img.width*ratio)/2, (canvas.height - img.height*ratio)/2
@@ -75,13 +71,5 @@
       function clearCanvas() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
       }
-        
-      function openImage(event, file) {
-
-          ImageHandler.loadImage(file).then(function (bitmap) {
-              image = bitmap;
-              drawPicture(bitmap);
-          });
-      }  
     }
 })();

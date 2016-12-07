@@ -2,7 +2,8 @@
   <div class="logo_container"><img id="logo_img" ng-src="images/logo.svg"/></div>
   <div class="save_open_container">
     <div class="open_container">
-      <input type="file" file-model="vm.file">
-      <img ng-click="vm.onClickOpen()" id="open_img" ng-src="images/folder.svg"></div>
+      <input id="upload" type="file" file-model="vm.file" style="display: none" onchange="angular.element(this).scope().vm.onClickOpen(this)">
+      <label for="upload"><img id="open_img" ng-src="images/folder.svg"></label>
+    </div>
     <div class="save_container"><img ng-click="vm.onClickSave()" id="save_img" ng-src="images/download.svg"></div>
 </div>

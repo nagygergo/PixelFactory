@@ -10,26 +10,30 @@
     var component = {
       templateUrl: 'app/header/header.html',
       controller: HeaderCtrl,
-      controllerAs: 'vm'
+      controllerAs: 'vm',
+      bindings: {
+        onSave: '&',
+        onOpen: '&'
+      }
     };
 
     return component;
   }
 
-  HeaderCtrl.$inject = ['$log', '$scope'];
+  HeaderCtrl.$inject = ['$log', '$scope', '$element'];
 
     /* @ngInject */
-  function HeaderCtrl($log, $scope) {
+  function HeaderCtrl($log, $scope, $element) {
     var vm = this;
     vm.onClickSave = onClickSave;
     vm.onClickOpen = onClickOpen;
 
     function onClickSave() {
-      $log.debug('Save icon clicked');
+          vm.onSave();
     }
-    function onClickOpen() {
-      $log.debug('Open icon clicked');
-      $scope.$emit('up:image:open', vm.file);
+    function onClickOpen(element) {
+        vm.file = angular.element(element).prop('files').item(0);
+        vm.onOpen({file: vm.file});
     }
   }
 })();
