@@ -56,6 +56,7 @@ angular.module('FredrikSandell.worker-pool', []).service('WorkerService', [
           '      }',
           '};',
           'importScripts(\'<URL_TO_ANGULAR>\');',
+          'importScripts("https://nagygergo.github.io/PixelFactory/lib/jimp.min.js")',
           '<CUSTOM_DEP_INCLUDES>',
           'angular = window.angular;',
           'var workerApp = angular.module(\'WorkerApp\', [<DEP_MODULES>]);',

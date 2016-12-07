@@ -1,4 +1,4 @@
-<div class="acceptdeny">
+<div class="acceptdeny" ng-class="{disabled: !vm.enabled}">
   <div class="accept_deny_container">
     <div class="accept_container"><img ng-click="vm.onClickAccept()" id="accept_img" ng-src="images/checkmark.svg" ng-hide=""></div>
     <div class="deny_container"><img ng-click="vm.onClickDeny()" id="deny_img" ng-src="images/cancel.svg" ng-hide=""></div>

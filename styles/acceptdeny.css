@@ -6,6 +6,9 @@
   left: 0;
   position: fixed; }
 
+.disabled .accept_deny_container {
+  display: none; }
+
 .accept_deny_container {
   height: 90%;
   top: 10%;
