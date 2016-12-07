@@ -30,7 +30,7 @@ angular.module('FredrikSandell.worker-pool', []).service('WorkerService', [
   function ($q) {
     var that = {};
     //this should be configured from the app in the future
-    var urlToAngular = 'http://localhost:8080/lib/angular.js';
+    var urlToAngular = 'https://nagygergo.github.io/PixelFactory/lib/angular.js';
     var serviceToUrlMap = {};
     that.setAngularUrl = function (urlToAngularJs) {
       urlToAngular = urlToAngularJs;
@@ -56,7 +56,7 @@ angular.module('FredrikSandell.worker-pool', []).service('WorkerService', [
           '      }',
           '};',
           'importScripts(\'<URL_TO_ANGULAR>\');',
-          'importScripts("http://localhost:8080/lib/jimp.min.js")',
+          'importScripts("https://nagygergo.github.io/PixelFactory/lib/jimp.min.js")',
           '<CUSTOM_DEP_INCLUDES>',
           'angular = window.angular;',
           'var workerApp = angular.module(\'WorkerApp\', [<DEP_MODULES>]);',
