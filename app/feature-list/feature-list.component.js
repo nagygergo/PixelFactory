@@ -10,6 +10,10 @@
         var component = {
             templateUrl: 'app/feature-list/feature-list.html',
             controller: FeatureListCtrl,
+            controllerAs: 'vm',
+            bindings: {
+                transform: '&'
+            }
         };
 
         return component;
@@ -19,6 +23,12 @@
 
     /* @ngInject */
     function FeatureListCtrl() {
+        var vm = this;
 
+        vm.transformClicked = transformClicked;
+
+        function transformClicked(type) {
+                vm.transform({type: type});
+        }
     }
 })();
