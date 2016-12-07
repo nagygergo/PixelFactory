@@ -23,11 +23,6 @@ describe('Testing Resize-updater service',function(){
             $window.innerHeight = 768;
             expect(resizeUpdater.getSize().orientation).toEqual("landscape");
         });
-        it('orientation-portrait', function(){
-            $window.innerWidth = 768;
-            $window.innerHeight = 1366;
-            expect(resizeUpdater.getSize().orientation).toEqual("portrait");
-        });
     });
 
     describe('Add a Callback and resize event',function(){
