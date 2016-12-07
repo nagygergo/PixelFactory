@@ -79,6 +79,7 @@
                     vm.image = imageData;
                     vm.unapproved = true;
                     vm.featuresEnabled = true;
+                    vm.fileFeaturesEnabled = true;
                 });
             }
         }
